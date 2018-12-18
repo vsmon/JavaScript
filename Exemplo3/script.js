@@ -5,8 +5,8 @@ function addBola(){
     console.log(left);
     bola = document.createElement("div");
     bola.id = "bola";
-    bola.style.left = left+"px";
-    bola.style.top = top+"px";
+    bola.style.left = `${left}px`;
+    bola.style.top = `${top}px`;
     bola.setAttribute("onClick", "removerBola(this)");
     document.body.appendChild(bola);
     
