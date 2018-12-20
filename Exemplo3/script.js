@@ -17,3 +17,7 @@ function removerBola(elemento){
 function iniciar(){
     setInterval("addBola()", 1000);
 }
+function random(){
+    num = Math.floor(Math.random() * 60);
+    console.log(num);
+}
