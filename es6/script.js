@@ -8,7 +8,7 @@
 }
 addEndereco({cidade:"Campina Grande", estado:"Paraiba"}); */
 
-function addEnderecoRef(endereco){
+/* function addEnderecoRef(endereco){
     const {cidade, estado} = endereco;
     const novoEndereco = {cidade, estado, pais:"Brasil"};
 
@@ -42,7 +42,25 @@ function setInfos(info){
 console.log(setInfos({nome:'Rodrigo', sobreNome:'Fonseca'}));
 
 //funcao rest
-function numeros(...numeros){
+function numerosRest(...numeros){
     console.log(numeros);
 }
-numeros(1,2,3,4,5,6);
+numerosRest(1,2,3,4,5,6,5);
+
+//Funcao Anonima
+function numeros(...numeros){
+    let total = numeros.reduce((atual,x) => atual + x);
+    console.log(total);
+}
+numeros(1,2,3,4,5,6,1);
+
+//Valor padrao para parametro
+function setInfo(nome = '', sobrenome = '', status = false){
+    console.log({nome, sobrenome, status});
+}
+setInfo("Rodrigo", "Fonseca"); */
+
+//Fetch
+fetch('https://viacep.com.br',{method:'POST'})
+    .then((r)=>r.json())
+    .then((json)=>{console.log(json);});
